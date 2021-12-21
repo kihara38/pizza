@@ -1,10 +1,11 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
 <div class="create-pizza">
     <h1>Create a New Pizza</h1>
     <form action="/pizzas" method="POST">
+        @csrf
         <label for="name">Your name</label>
         <input type="text" name="name" id="name">
         <label for="type"> Choose Pizza Type:</label>
@@ -21,6 +22,13 @@
             <option value="thin & cripsy">thin & cripsy</option>
             <option value="thick">thick</option>
         </select>
+        <fieldset>
+            <label>Extra topping</label>
+            <input type="checkbox" name="toppings[]" value="mushrooms">mushrooms<br>
+            <input type="checkbox" name="toppings[]" value="peppers">peppers<br>
+            <input type="checkbox" name="toppings[]" value="garlic">garlic<br>
+            <input type="checkbox" name="toppings[]" value="olives">olives<br>
+        </fieldset>
         <input type="submit" value="Order Pizza">
     </form>
 </div>

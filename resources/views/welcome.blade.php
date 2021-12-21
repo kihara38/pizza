@@ -18,10 +18,10 @@
     <div class="content">
         <img src="/img/pizza-house.png" alt="pizza house">
       <div class="title">kenyan best pizza's</div>
-  </div>
-  <div>
+      <p class="mssg">{{session('mssg')}} </p>
   <a href="/pizzas/create">Order Pizza</a>
-</div>
+  </div>
+
   </div>
 @endsection
 
